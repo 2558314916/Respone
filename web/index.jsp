@@ -11,12 +11,13 @@
     <title>$Title$</title>
   </head>
   <body>
-  <form action="vCode">
+  <form action="login">
     username: <input type="text" name="username" placeholder="username">
     password: <input type="password" name="passwd" placeholder="passwd">
-    vCode <input type="text" name="code">
-    <img src="/Response/ValidateCode" onclick="changeCode()" alt="">
+    vCode<input type="text" name="code">
+    <a href="javascript:;"> <img src="vCode" alt="image" id="code_img" > </a>
     <input type="submit" value="Submit">
+    <a href="out"> outputStream</a>
   </form>
   </body>
 </html>
