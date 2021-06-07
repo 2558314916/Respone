@@ -15,7 +15,7 @@
     username: <input type="text" name="username" placeholder="username">
     password: <input type="password" name="passwd" placeholder="passwd">
     vCode<input type="text" name="code">
-    <a href="javascript:;"> <img src="vCode" alt="image" id="code_img" > </a>
+    <a href="javascript:"> <img src="vCode" alt="image" id="code_img" > </a>
     <input type="submit" value="Submit">
     <a href="out"> outputStream</a>
   </form>
