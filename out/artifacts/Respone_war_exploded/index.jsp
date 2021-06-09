@@ -9,23 +9,29 @@
 <html>
   <head>
     <title>$Title$</title>
+    <script src="${pageContext.request.contextPath}/WEB-INF/static/JQuery.js"></script>
   </head>
   <body>
   <form action="login">
-    username: <input type="text" name="username" placeholder="username">
-    password: <input type="password" name="passwd" placeholder="passwd">
-    vCode<input type="text" name="code">
-
-    <a href="javascript:;" onclick="changeCodeImg()"> <img src="vCode" alt="image" id="code_img" > </a>
-    <input type="submit" value="Submit">
-    <a href="out"> outputStream</a>
+    username: <input type="text" name="username" placeholder="username"><br>
+    password: <input type="password" name="passwd" placeholder="passwd"><br>
+    vCode<input type="text" name="code"><br>
+    <input type="submit" value="Submit"><br>
+    <a href="out">点击下载</a>
+    <%--验证码--%>
+    <br>
+    <a href="javascript:" onclick="changeCodeImg()"><img id="vimg" src="${pageContext.request.contextPath}/vCode"/></a>
   </form>
+  <br>
+  <a href="redirect"> redirect </a>
   <script>
     function changeCodeImg(){
-      var num=Math.ceil(Math.random()*10);//生成一个随机数（防止缓存）
-      var src = document.getElementById("#code_img")[0].src;
-      //alert(src + "?num=" + num);
-      document.getElementById("#vimg").setAttribute('src',src + "?num=" + num);
+      var time = new Date().getTime();
+      let vimg = document.getElementById("vimg");
+      let num = Math.ceil(Math.random()*10);
+      vimg.onclick = function (){
+        vimg.src = "vCode?time="+time;
+      }
     }
   </script>
   </body>

@@ -32,7 +32,7 @@ public class ValidateCodeTest extends HttpServlet {
         ValidateCode vCode = new ValidateCode(130,50,4,100);
         String code = vCode.getCode();
         session.setAttribute("vcodes",code);
-//        req.setAttribute("codes",code);
+        //req.setAttribute("codes",code);
         vCode.write(resp.getOutputStream());
         System.out.println("Vcode = " + code);
     }
