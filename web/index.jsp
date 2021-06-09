@@ -20,15 +20,17 @@
     <a href="out">点击下载</a>
     <%--验证码--%>
     <br>
-    <a href="javascript:" onclick="changeCodeImg()"><img id="vimg" src="${pageContext.request.contextPath}/vCode"/></a>
+    <a href="javascript:" onclick="changeCodeImg()">
+      <img id="vimg" src="vCode"/>
+    </a>
   </form>
   <br>
-  <a href="redirect"> redirect </a>
+  <a href="redirect"> redirect </a><br>
+  <a href="mime">mime</a>
   <script>
     function changeCodeImg(){
       var time = new Date().getTime();
       let vimg = document.getElementById("vimg");
-      let num = Math.ceil(Math.random()*10);
       vimg.onclick = function (){
         vimg.src = "vCode?time="+time;
       }
