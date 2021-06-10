@@ -26,7 +26,9 @@
   </form>
   <br>
   <a href="redirect"> redirect </a><br>
-  <a href="mime">mime</a>
+  <a href="mime">mime</a><br>
+  <a href="img.html">image</a><br>
+  <a href="download">下载视频</a>
   <script>
     function changeCodeImg(){
       var time = new Date().getTime();
